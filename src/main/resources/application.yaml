@@ -1,0 +1,16 @@
+application:
+  tokenSecret: ${JWT_SECRET}
+  tokenExpiration: 3600000 #one hour
+  passwordPattern: ^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{10,}$ 
+    # At least 10 characters long
+    # At least one number
+    # At least one lowercase letter
+    # At least one uppercase letter
+  allowedUsers:
+    - fndribeiro@hotmail.com 
+    
+spring:
+   data:
+      mongodb:
+         uri: ${SPRING_DATA_MONGODB_URI}
+         database: showcase
